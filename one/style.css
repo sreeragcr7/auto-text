@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #2f3542;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif ;
+  }
+  
+  .text {
+    font-size: 5rem;
+    font-weight: 600;
+    min-width: 250px;
+  }
+
+  .text span{
+    position: relative;
+  }
+
+  .text span::before{
+    content: "G.O.A.T";
+    color: #ff7847;
+    animation: words 20s infinite;
+  }
+
+  .text span::after{
+    content: " ";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 101%;
+    background-color:#2f3542 ;
+    border-left: 2px solid  #ff7847;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+  }
+
+  @keyframes cursor {
+    to{
+        border-left: 2px solid  #ff7f5000;
+    }
+  }
+  
+ @keyframes words {
+    0%,20%{
+        content:'G.O.A.T';
+    }
+    21%,40%{
+        content:'King';
+    }
+    41%,60%{
+        content:'Legend';
+    }
+    61%,80%{
+        content:'Machine';
+    }
+    81%,100%{
+        content:'Greatest';
+    }
+ }
+
+ @keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+ }
+  
